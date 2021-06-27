@@ -1,0 +1,18 @@
+extends ../auth.layout.pug
+
+block content
+  .auth-block
+    .auth-block__content
+      .auth-block__user
+        .user.user_color_grey
+          .user__pic
+            img.user__pic-img
+          .user__description
+            .user__name Владимир Астахов
+            .user__info Личный сайт разработчика
+      .auth-block__socials
+        +socials([
+              ['https://vk.com/cergo20152015', 'vk'],
+              ['https://github.com/yralsmash', 'gh'],
+              ['in', 'in']
+            ], 'socials_fill_green')

@@ -1,0 +1,23 @@
+// socials
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: 30px;
+
+}
+
+.socials__link-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+
+  &:hover {
+    transition: 1s;
+    fill: rgb(143, 138, 138);
+  }
+}

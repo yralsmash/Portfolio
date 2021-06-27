@@ -1,0 +1,61 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне';
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.hero
+    .hero__links
+      +socials([
+              ['https://vk.com/cergo20152015', 'vk'],
+              ['https://github.com/yralsmash', 'gh'],
+              ['in', 'in']
+            ])
+    a(href="#").hamburger.hero__menu
+      .hamburger__bars
+
+    .hero__content
+      +image('titles/portfolio-header.png', 'page title', 'title-img')
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user-pic
+              +image('content/user.jpg', 'user pic', 'user__pic-img')
+          .user__info
+            h1.user__name Круглов Сергей
+            .user__desc Личный сайт веб разработчика
+    button.hero__arrow-down
+      +icon('arrow_down', 'arrow-down-icon')
+  section.about
+    .about__col.about__col--bg-white
+      .about__left-title
+        h1.title обо мне
+      .about__user-info
+        .user-info
+          .user-info__avatar
+            +image('')
+          .user-info__title
+            h2.subtitle кто я
+          .user-info__text.text__block
+            p.
+              Я веб разработчик из Иркутска. Мне 19 лет.
+              Я занимаюсь разработкой современнных сайтов
+              и приложений. Мне нравится делать интересные
+              и современные проекты.
+            p.
+              Этот сайт я сделал в рамках обучения в школе онлайн
+              образования Loftschool. Чуть позже я освежу в нём
+              свой контент. А пока посмотрите,
+              как тут всё классно и красиво!
+    .about__col.about__col--bg-beige
+      .about__rigth-title
+        h2.subtitle Чем я могу быть вам полезен
+        .about__desc-text.text__block
+          p.
+            Больше всего меня привлекает Frontend разработка, но я также знаком
+            и могу решать не сложные задачи на Backend. Но давайте всё по порядку.
+        .about__content
+

@@ -1,0 +1,44 @@
+// user
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.user__pic-container {
+  margin-bottom: 20px;
+}
+
+.user-pic {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.user__pic-img {
+  border-radius: 50%;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.user__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.user__name {
+  font-weight: bold;
+  font-size: 35px;
+}

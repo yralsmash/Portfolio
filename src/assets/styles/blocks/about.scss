@@ -1,0 +1,28 @@
+// about-section
+
+.about {
+  display: flex;
+  min-height: 100vh;
+}
+
+.about__col {
+  width: 50%;
+
+  &--bg {
+    &-white {
+      background: #fff;
+    }
+
+    &-beige {
+      background:$beige;
+    }
+  }
+}
+
+.about__left-title {
+  margin-bottom: 30px;
+}
+
+.user-info__avatar {
+  margin-bottom: 30px;
+}
