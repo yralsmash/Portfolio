@@ -1,34 +1,24 @@
-# My Web-sites:
-Kruglov Sergey
-# 1) Coworking
-https://yralsmash.github.io/Coworking/
-# 2) Burger with King
-https://yralsmash.github.io/Burger-with-King/
-# 3) Portfolio
-https://yralsmash.github.io/Burger-with-King/
+# Учебный шаблон проекта Portfolio
 
-##  How to install and build my app:
+> Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
+
+##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone https://github.com/yralsmash/Burger-with-King
-$ cd Portfolio
-$ yarn
+$ git clone git@github.com:loftschool/advanced-boilerplate.git
+$ cd advanced-boilerplate
+$ npm install
 ```
 
 ## Скрипты package.json:
 
 | Скрипт | Назначение |
 | ------ | ------ |
-| dev | Запустит webpack-dev-server с _горячей_ заменой модулей |
-| build | Соберет проект для **production** (проект готов к загрузке на сервер) |
+| dev:mpa | Разработка основного сайта. Страницы **обо мне**, **блог** и т.п. Запустит dev сценарии **Gulp**. |
+| dev:spa | Разработка админ панели в стиле **SPA** на **Vue.js** |
+| build  | Сборка обоеих частей проекта. Все файлы будут доступны из директории **dist** |
 | reg | Консольная утилита для регистрации. Использовать перед началом работы над **админ-панелью**. |
-| storybook | Запустит сторибук для разработки компонентов |
 
 #### Чтобы запустить скрипт:
 ```sh
 $ npm run имя_скрипта
-```
-
-##### Либо:
-```sh
-$ yarn имя_скрипта
 ```

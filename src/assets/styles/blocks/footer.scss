@@ -1,0 +1,47 @@
+// footer
+
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  background: rgba(#000, 0.6);
+  color: #fff;
+}
+
+.footer__col {
+  padding: 2%;
+  display: flex;
+  flex-flow: wrap column;
+  width: 33%;
+}
+
+.footer__col--border {
+  position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 80px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 5px;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+}
+
+.footer__nav-link {
+  font-weight: bold;
+  padding: 5px;
+}

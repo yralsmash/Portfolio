@@ -1,0 +1,37 @@
+// contacts
+
+.contacts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  background: rgba(#fff, 0.5);
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contacts__item {
+  padding: 2%;
+  display: flex;
+  width: 50%;
+}
+
+.contacts-row {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__icon {
+  padding: 5px;
+}
+
+.contacts__icon-img {
+  width: 40px;
+  height: 40px;
+  fill: $blue;
+}

@@ -1,0 +1,38 @@
+// auth
+
+.welcome {
+  background: url(./assets/images/bg/bg-header.jpg) center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(#000, 0.3);
+  padding: 45px;
+  position: relative;
+}
+
+.auth__nav {
+  position: absolute;
+  width: 100%;
+  top: 92%;
+}
+
+.auth__btn {
+  border-left: 1px solid #fff;
+
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.auth__buttons {
+  display: flex;
+  width: 100%;
+}

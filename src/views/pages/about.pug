@@ -2,46 +2,35 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне';
+  - var pageName = 'Круглов Сергей';
+  - var subtitle = 'Личный сайт веб разработчика';
 
 block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
-    .hero__links
-      +socials([
-              ['https://vk.com/cergo20152015', 'vk'],
-              ['https://github.com/yralsmash', 'gh'],
-              ['in', 'in']
-            ])
-    a(href="#").hamburger.hero__menu
-      .hamburger__bars
-
-    .hero__content
-      +image('titles/portfolio-header.png', 'page title', 'title-img')
-      .hero__user-desc
-        .user
-          .user__pic-container
-            .user-pic
-              +image('content/user.jpg', 'user pic', 'user__pic-img')
-          .user__info
-            h1.user__name Круглов Сергей
-            .user__desc Личный сайт веб разработчика
-    button.hero__arrow-down
-      +icon('arrow_down', 'arrow-down-icon')
-  section.about
+  section.about.section
+    .triangles
+      .triangle
+        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-white
+          polygon(points='0 0, 1000 150, 0 150')
+      .triangle
+        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-beige
+          polygon(points='1000 150, 0 150, 1000 0')
     .about__col.about__col--bg-white
-      .about__left-title
-        h1.title обо мне
+      .about__title-img
+        .page__title.page__title--align-items-flex-start
+          +icon('stars2', 'bg-img')
+          h1.bg-img-title.bg-img-title--color-dark обо мне
       .about__user-info
         .user-info
           .user-info__avatar
-            +image('')
+            +image('content/user-info-avatar.jpg', 'user info avatar', 'user-info__avatar-pic')
           .user-info__title
             h2.subtitle кто я
           .user-info__text.text__block
             p.
-              Я веб разработчик из Иркутска. Мне 19 лет.
+              Я веб разработчик из г.Шелехова(Иркутская обл.). Мне 19 лет.
               Я занимаюсь разработкой современнных сайтов
               и приложений. Мне нравится делать интересные
               и современные проекты.
@@ -51,11 +40,48 @@ block content
               свой контент. А пока посмотрите,
               как тут всё классно и красиво!
     .about__col.about__col--bg-beige
-      .about__rigth-title
+      .about__wrapper
         h2.subtitle Чем я могу быть вам полезен
         .about__desc-text.text__block
           p.
             Больше всего меня привлекает Frontend разработка, но я также знаком
             и могу решать не сложные задачи на Backend. Но давайте всё по порядку.
         .about__content
-
+          -
+            var skills = [
+              ['Frontend', [['Html5', 90], ['css3', 90], ['javascript & Jquery', 70]]],
+              ['Backend', [['PHP', 20], ['mySQL', 50], ['Node.js & npm', 80], ['Mongo.db', 20]]],
+              ['Workflow', [['Git', 90], ['Gulp', 70], ['Bower', 20]]],
+            ]
+          ul.skills-list
+            each skillsrow in skills
+              li.skills-item.skills-row
+                h2.skills-row__title #{skillsrow[0]}
+                ul.skills-row__list
+                  each skill in skillsrow[1]
+                    li.skills-row__item
+                      figure.skill(data-percents="70")
+                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                        span.skill__title #{skill[0]}
+  section.map.section
+    #map
+    .map__content
+      .contacts
+        .contacts__title
+          h2.subtitle Контакты
+        address.contacts__data
+          ul.contacts__list
+            -
+              var contacts = [
+                ['skype_n', 'skype_ndr'],
+                ['phone_n', '+7 924 830 77 04'],
+                ['mail_n', 'wqetris@gmail.com'],
+                ['address_n', 'г.Шелехов, Иркутская обл.'],
+              ]
+            each item in contacts
+              li.contacts__item.contacts-row
+                .contacts-row.contacts__icon
+                  +icon(`${item[0]}`, 'contacts__icon-img')
+                .contacts-row.contacts__title #{item[1]}

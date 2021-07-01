@@ -1,0 +1,25 @@
+// triangle
+
+.triangles {
+  display: flex;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+
+.triangle {
+  width: 50%;
+}
+
+.triangle__texture {
+  // background: rgba(#000, 0.5);
+  fill: rgba(#000, 0.5);
+}
+
+.triangle__texture--fill-white {
+  fill: $white;
+}
+
+.triangle__texture--fill-beige {
+  fill: $beige;
+}

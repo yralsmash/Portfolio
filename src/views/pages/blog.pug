@@ -2,6 +2,70 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Блог';
+  - var pageName = 'Круглов Сергей';
+  - var subtitle = 'Статьи, которые я написал';
 
 block content
-  h1 "Блог"
+
+block content
+  section.blog.section
+    .triangles
+      .triangle
+        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-white
+          polygon(points='0 0, 1000 150, 0 150')
+      .triangle
+        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-beige
+          polygon(points='1000 150, 0 150, 1000 0')
+    sidebar.blog__menu
+      nav.nav
+        -
+          var nav = [['Самое важное в SASS', '#id'],
+          ['Приёмы в вёрстке, без которых не обходится ни один сайт', '#id'],
+          ['Самый необходимый набор Gulp плагинов', '#id'],
+          ['Почему я выбрал Pug', '#id']
+          ]
+        ul.nav__list
+          each item in nav
+            li.nav__item
+              a(href=`${item[1]}`).nav__link #{item[0]}
+    .blog__content
+      -
+        var blogContent = [
+          {
+            title: 'Самое важное в SASS',
+            date: '29 июня 2021',
+            text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            code: '1825071298712987'
+          },
+          {
+            title: 'Приёмы в вёрстке, без которых не обходится ни один сайт',
+            date: '30 июня 2021',
+            text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            code: ''
+          },
+          {
+            title: 'Самый необходимый набор Gulp плагинов',
+            date: '1 июля 2021',
+            text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            code: ''
+          },
+          {
+            title: 'Почему я выбрал Pug',
+            date: '3 июля 2021',
+            text1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            text2: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quidem exercitationem porro voluptatum similique saepe consequatur soluta id hic! Eum deleniti quam veniam quis delectus? Modi repudiandae possimus, eum sapiente aperiam eius dolorem consequatur adipisci perspiciatis, non ipsam qui iusto enim.',
+            code: ''
+          }
+        ]
+      ul.blog__list
+        each tag in blogContent
+          li.blog__item
+            h1.blog__title= tag.title
+            time.blog__date= tag.date
+            .blog__text.text__block
+              p= tag.text1
+              p= tag.text2
+              code.blog__code= tag.code

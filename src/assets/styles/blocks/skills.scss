@@ -1,0 +1,52 @@
+// skills
+
+.skills-row__title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.skills-row__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-item {
+  padding: 1%;
+}
+
+.skill {
+  display: block;
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 5px 25px 15px 0;
+}
+
+.skill__figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill__circle {
+  fill: transparent;
+  stroke: #ccc;
+  stroke-width: 15px;
+}
+
+.skill__circle_above {
+  stroke: $blue;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+}
+
+.skill__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

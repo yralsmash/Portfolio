@@ -1,0 +1,18 @@
+// blog-section
+
+.blog {
+  display: flex;
+}
+
+.blog__menu {
+  padding: 5%;
+}
+
+.blog__content {
+  padding: 5%;
+  overflow: auto;
+}
+
+.blog__item {
+  margin-bottom: 100px;
+}

@@ -2,8 +2,10 @@
   "white": "#efeee9",
   "beige": "#eeebdf",
   "green": "#16c2aa",
-  "text-color": "#455a64",
+  "text-color": "#474b57",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "subtitle" : "#a7a7a8",
+  "blue" : "#0548be",
+  "dark-blue" : "#083c96"
 }

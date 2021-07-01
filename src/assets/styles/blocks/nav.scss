@@ -1,0 +1,23 @@
+// navigation
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+.nav__item {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  padding: 10px;
+  border-right: 3px solid transparent;
+  font-weight: bold;
+
+  &:hover {
+    color: $blue;
+    border-right: 3px solid $blue;
+  }
+}

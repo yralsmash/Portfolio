@@ -1,0 +1,49 @@
+// feedback-section
+
+.feedback {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 300px;
+  background: url(./assets/images/bg/bg-feedback.jpg) center center / cover no-repeat;
+}
+
+.feedback__content {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback__block {
+  padding: 1%;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-style: italic;
+  color: #fff;
+}
+
+.feedback__img {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.feedback__img-pic {
+  border-radius: 50%;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.feedback__desc-title {
+  font-weight: bold;
+}

@@ -1,2 +1,25 @@
 footer.footer
-  h2 Copyright &copy;
+  .footer__col
+    .text__block
+      p.
+        Этот сайт я сделал в рамках обучения в школе
+        онлайн образования LoftSchool.
+  .footer__col.footer__col--border
+    -
+      var footerNavItem = [
+        ['./my-works.html', 'Мои работы'],
+        ['./about.html', 'Обо мне'],
+        ['./blog.html', 'Блог'],
+        ['./index.html', 'Авторизация']
+      ]
+    nav.footer__nav
+      each item in footerNavItem
+        a(href=`${item[0]}`).footer__nav-link  #{item[1]}
+    +socials([
+      ['https://vk.com/cergo20152015', 'vk'],
+      ['https://github.com/yralsmash', 'gh'],
+      ['in', 'in']
+      ])
+  .footer__col
+    each contactFooter in ['skype_dnd', '+7 924 830 77 04', 'wqetris@gmail.com', 'г.Шелехов, Иркутская обл.']
+      span.footer__contacts #{contactFooter}

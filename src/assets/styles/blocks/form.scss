@@ -1,0 +1,28 @@
+// form
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(#000, 0.3);
+  color: #ccc;
+}
+
+.form__label {
+  width: 100%;
+  padding: 2.5% 7%;
+}
+
+.form__input {
+  width: 100%;
+  padding: 3%;
+  resize: none;
+  background: transparent;
+
+}
+
+.form__buttons {
+  display: flex;
+  width: 100%;
+}

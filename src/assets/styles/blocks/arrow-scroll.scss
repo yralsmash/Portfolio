@@ -1,0 +1,23 @@
+// arrow-scroll
+
+.arrow-scroll-btn {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  transform: translateX(-50%);
+}
+
+.arrow-scroll {
+  width: 30px;
+  height: 30px;
+  fill:#fff;
+
+  &-up {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    transition: 1s;
+    fill: rgb(143, 138, 138);
+  }
+}

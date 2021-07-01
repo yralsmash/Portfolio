@@ -2,8 +2,9 @@
 
 .socials {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 10px;
 }
 
 .socials__item {
@@ -17,7 +18,7 @@
   fill: white;
 
   &:hover {
-    transition: 1s;
-    fill: rgb(143, 138, 138);
+    transition: .5s;
+    fill: $blue;
   }
 }

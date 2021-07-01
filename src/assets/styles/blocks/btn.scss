@@ -1,0 +1,42 @@
+// btn
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  background: $blue;
+  padding: 13px;
+  width: 100%;
+
+  &:hover {
+    transition: 0.5s;
+    background: $dark-blue;
+  }
+}
+
+.btn-reset {
+  background: transparent;
+  color: #ccc;
+
+  &:hover {
+    transition: 0.5s;
+    background: $dark-blue;
+  }
+}
+
+.auth-button {
+  padding: 1%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: transparent;
+  border: 2px solid #fff;
+  width: auto;
+
+  &:hover {
+    border: 2px solid $dark-blue;
+    background: $dark-blue;
+  }
+}

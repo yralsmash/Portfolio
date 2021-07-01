@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const config = require("./env.paths.json");
 const env = process.env.NODE_ENV;
-// const pug = require('gulp-pug');
 
 // плагины галпа отдельно подключать не нужно,
 // используем в пайпе как $gp.имяПлагина (без приставки gulp-)
@@ -12,29 +11,6 @@ const reload = browserSync.reload;
 const $webpack = require("webpack-stream");
 const webpack = require("webpack");
 const del = require("del");
-
-
-const paths = {
-  root: './dist',
-  templates: {
-    pages: './src/views/pages/*.pug',
-    src: './src/views/**/*.pug',
-    dest: './dist'
-  },
-  styles: {
-    main: './src/assets/styles/main.scss',
-    src: './src/assets/styles/**/*.scss',
-    dest: './dist/assets/styles'
-  }
-}
-
-// pug
-// function templates() {
-//   return gulp.src(paths.templates.pages)
-//     .pipe(pug({pretty: true }))
-//     .pipe(gulp.dest(paths.root));
-// }
-// exports.templates = templates;
 
 // стили
 gulp.task("styles", () => {
@@ -66,7 +42,15 @@ gulp.task("scripts", () => {
   return gulp
     .src(`${config.SRC_DIR}/scripts/*.js`)
     .pipe($gp.plumber())
-    .pipe($webpack(require("./webpack.mpa.config"), webpack))
+    .pipe(
+      $webpack(
+        {
+          ...require("./webpack.mpa.config"),
+          mode: env
+        },
+        webpack
+      )
+    )
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -99,7 +83,10 @@ gulp.task("svg", done => {
       $gp.svgmin({
         js2svg: {
           pretty: true
-        }
+        },
+        plugins: [
+
+        ]
       })
     )
     .pipe(
@@ -108,9 +95,7 @@ gulp.task("svg", done => {
           $("[fill], [stroke], [style], [width], [height]")
             .removeAttr("fill")
             .removeAttr("stroke")
-            .removeAttr("style")
-            .removeAttr("width")
-            .removeAttr("height");
+            .removeAttr("style");
         },
         parserOptions: { xmlMode: true }
       })
@@ -135,7 +120,6 @@ gulp.task("images", () => {
       `${config.SRC_DIR}/images/**/*.*`,
       `!${config.SRC_DIR}/images/icons/*.*`
     ])
-    .pipe($gp.if(env === "production", $gp.imagemin()))
     .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/`));
 });
 
@@ -154,7 +138,7 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts"),//, "scripts"
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
 );

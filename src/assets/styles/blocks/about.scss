@@ -2,11 +2,12 @@
 
 .about {
   display: flex;
-  min-height: 100vh;
 }
 
 .about__col {
   width: 50%;
+  display: flex;
+  padding: 1%;
 
   &--bg {
     &-white {
@@ -19,10 +20,16 @@
   }
 }
 
-.about__left-title {
-  margin-bottom: 30px;
+.about__title-img,
+.about__user-info {
+  width: 50%;
 }
 
-.user-info__avatar {
-  margin-bottom: 30px;
+.about__wrapper {
+  padding: 2%;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
 }

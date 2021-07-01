@@ -1,0 +1,46 @@
+// my-work-section
+
+.my-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-works__title{
+  background: rgba(#000, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 100%;
+}
+
+.my-works__content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.my-works__content-col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-works__content-lang {
+  text-align: center;
+  padding: 5%;
+  font-weight: bold;
+  color: $blue;
+}
+
+.my-works__icon-img {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-right: 7px;
+}

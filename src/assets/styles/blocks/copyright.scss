@@ -1,0 +1,18 @@
+// copyright
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $blue;
+  color: #fff;
+  z-index: 10;
+}
+
+.auth-copyright {
+  background: transparent;
+  bottom: 50px;
+}

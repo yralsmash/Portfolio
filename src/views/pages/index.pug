@@ -1,18 +1,29 @@
 extends ../auth.layout.pug
 
 block content
-  .auth-block
-    .auth-block__content
-      .auth-block__user
-        .user.user_color_grey
-          .user__pic
-            img.user__pic-img
-          .user__description
-            .user__name Владимир Астахов
-            .user__info Личный сайт разработчика
-      .auth-block__socials
+  section.welcome.section
+    button.btn.auth-button Авторизоваться
+    .auth
+      .user
+        .user__pic-container
+          .user-pic
+            +image('content/user.jpg', 'user pic', 'user__pic-img')
+        .user__desc
+          h1.user__name Круглов Сергей
+          .user__site Личный сайт веб разработчика
+      .auth__socials
         +socials([
-              ['https://vk.com/cergo20152015', 'vk'],
-              ['https://github.com/yralsmash', 'gh'],
-              ['in', 'in']
-            ], 'socials_fill_green')
+                ['https://vk.com/cergo20152015', 'vk'],
+                ['https://github.com/yralsmash', 'gh'],
+                ['in', 'in']
+              ])
+      nav.auth__nav
+        -
+          var authNav = [
+          ['./my-works.html', 'Мои работы'],
+          ['./about.html', 'Обо мне'],
+          ['./blog.html', 'Блог'],
+          ]
+        .auth__buttons
+          each item in authNav
+            a(href=`${item[0]}`).btn.auth__btn #{item[1]}

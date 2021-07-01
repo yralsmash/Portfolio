@@ -1,0 +1,22 @@
+block variables
+
+header.header
+  .header__links
+    +socials([
+            ['https://vk.com/cergo20152015', 'vk'],
+            ['https://github.com/yralsmash', 'gh'],
+            ['in', 'in']
+          ])
+  a(href="#" target="_blank").hamburger.header__menu
+    .hamburger__bars
+
+  .header__content
+    +icon('stars1', 'bg-img')
+    .header__user-desc
+      .user
+        .user__pic-container
+          .user-pic
+            +image('content/user.jpg', 'user pic', 'user__pic-img')
+        .user__page-desc
+          h1.user__page-name #{pageName}
+          .user__page-site #{subtitle}

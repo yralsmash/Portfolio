@@ -1,5 +1,58 @@
 // title
 
-.title {
-  padding: 20px;
+.page__title {
+  font-family: 'Sansus Regular', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+
+  &--align-items-flex-start {
+    align-items: flex-start;
+  }
+}
+
+.bg-img-title {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 70px 0;
+  font-size: 63px;
+  font-weight: bold;
+  font-family: 'Sansus Regular', sans-serif;
+
+  &--color-dark {
+    color: $text-color;
+  }
+}
+
+.subtitle {
+  font-weight: bold;
+  padding: 40px;
+  font-size: 35px;
+  position: relative;
+  text-align: center;
+  font-family: 'Sansus Regular', sans-serif;
+
+  &--color-white {
+    color: #fff;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    top: 85%;
+    background: $subtitle;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

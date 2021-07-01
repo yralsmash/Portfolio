@@ -12,9 +12,11 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
+        include ./common/header.pug
         block content
-      include ./common/menu.pug
+      //- include ./common/menu.pug
       include ./common/footer.pug
+      include ./common/copyright.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
