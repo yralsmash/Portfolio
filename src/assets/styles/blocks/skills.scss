@@ -12,14 +12,28 @@
 
 .skills-item {
   padding: 1%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.skills-row__list {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .skill {
   display: block;
   position: relative;
-  width: 130px;
-  height: 130px;
-  margin: 5px 25px 15px 0;
+  width: 8.125rem;
+  height: 8.125rem;
+  margin: 0.3125rem 1.56rem 0.93rem 0;
 }
 
 .skill__figure {

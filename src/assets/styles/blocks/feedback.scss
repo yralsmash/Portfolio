@@ -6,6 +6,10 @@
   flex-direction: column;
   padding-bottom: 300px;
   background: url(./assets/images/bg/bg-feedback.jpg) center center / cover no-repeat;
+
+  @include phones {
+    padding-bottom: 350px;
+  }
 }
 
 .feedback__content {
@@ -13,17 +17,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    padding: 2%;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .feedback__block {
   padding: 1%;
-  width: 400px;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-style: italic;
   color: #fff;
+
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .feedback__img {
@@ -31,9 +48,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 0.93rem;
 }
 
 .feedback__img-pic {

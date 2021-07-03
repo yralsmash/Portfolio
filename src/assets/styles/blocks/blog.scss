@@ -2,17 +2,33 @@
 
 .blog {
   display: flex;
+  padding-bottom: 9.375rem;
+
+  @include tablets {
+    padding-bottom: 14.187rem;
+  }
 }
 
 .blog__menu {
-  padding: 5%;
+  padding: 3% 0.5%;
+  width: 30%;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .blog__content {
-  padding: 5%;
+  width: 70%;
+  padding: 3%;
   overflow: auto;
+
+  @include tablets {
+    width: 100%;
+    padding: 3%;
+  }
 }
 
 .blog__item {
-  margin-bottom: 100px;
+  margin-bottom: 3.125rem;
 }

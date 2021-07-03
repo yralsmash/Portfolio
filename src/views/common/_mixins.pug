@@ -11,3 +11,42 @@ mixin socials(socials, modClass)
       li.socials__item
         a(href=`${item[0]}`).socials__link
           +icon(item[1], 'socials__link-icon')
+
+mixin header
+  header.header
+    .header__links
+      +socials([
+              ['https://vk.com/cergo20152015', 'vk'],
+              ['https://github.com/yralsmash', 'gh'],
+              ['in', 'in']
+            ])
+    a(href="#" target="_blank").hamburger.header__menu
+      .hamburger__bars
+
+    if title== 'БЛОГ'
+      .header__content
+        +icon('stars1', 'bg-img')
+        .header__user-desc
+          .user
+            .user__pic-container
+              .user-pic
+                +image('content/user.jpg', 'user pic', 'user__pic-img')
+            .user__page-desc
+              h1.user__page-name #{title}
+              .user__page-site #{subtitle}
+      button.arrow-scroll-btn.arrow-scroll-btn--blog
+        +icon('arrow_down', 'arrow-scroll')
+    else
+      .header__content
+        +icon('stars1', 'bg-img')
+        .header__user-desc
+          .user
+            .user__pic-container
+              .user-pic
+                +image('content/user.jpg', 'user pic', 'user__pic-img')
+            .user__page-desc
+              h1.user__page-name #{pageName}
+              .user__page-site #{subtitle}
+      button.arrow-scroll-btn
+        +icon('arrow_down', 'arrow-scroll')
+

@@ -1,6 +1,7 @@
 // copyright
 
-.copyright {
+.copyright,
+.auth-copyright {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -10,9 +11,24 @@
   background: $blue;
   color: #fff;
   z-index: 10;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .auth-copyright {
   background: transparent;
   bottom: 50px;
+}
+
+.copyright__text {
+  &:before {
+    content: '|';
+    margin: 4px;
+
+    @include tablets {
+      content: '';
+    }
+  }
 }

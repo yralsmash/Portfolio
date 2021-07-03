@@ -1,10 +1,9 @@
 footer.footer
+  .footer__col.footer__col--tablets
+    p.
+      Этот сайт я сделал в рамках обучения в школе
+      онлайн образования LoftSchool.
   .footer__col
-    .text__block
-      p.
-        Этот сайт я сделал в рамках обучения в школе
-        онлайн образования LoftSchool.
-  .footer__col.footer__col--border
     -
       var footerNavItem = [
         ['./my-works.html', 'Мои работы'],
@@ -21,5 +20,5 @@ footer.footer
       ['in', 'in']
       ])
   .footer__col
-    each contactFooter in ['skype_dnd', '+7 924 830 77 04', 'wqetris@gmail.com', 'г.Шелехов, Иркутская обл.']
+    each contactFooter in ['skype_dnd', 'wqetris@gmail.com', '+7 924 830 77 04', 'г.Шелехов, Иркутская обл.']
       span.footer__contacts #{contactFooter}

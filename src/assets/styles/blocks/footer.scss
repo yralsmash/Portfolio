@@ -7,41 +7,57 @@
   bottom: 0;
   background: rgba(#000, 0.6);
   color: #fff;
+  padding: 1%;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+
+  @include tablets {
+    padding: 1%;
+  }
+  @include phones {
+    margin-bottom: 2.57rem;
+    flex-direction: column;
+  }
 }
 
 .footer__col {
-  padding: 2%;
+  padding: 0 1%;
   display: flex;
   flex-flow: wrap column;
   width: 33%;
+  border-left: 1px solid #ccc;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  @include tablets {
+    padding: 1%;
+    width: 50%;
+    border-left: none;
+
+    &:last-child {
+      text-align: end;
+    }
+  @include phones {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+  }
 }
 
-.footer__col--border {
-  position: relative;
+.footer__col--tablets {
 
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      width: 2px;
-      height: 80px;
-      background: #fff;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border-radius: 5px;
-    }
-
-    &:before {
-      left: 0;
-    }
-
-    &:after {
-      right: 0;
-    }
+  @include tablets {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
 }
 
 .footer__nav-link {
   font-weight: bold;
-  padding: 5px;
+  padding-right: 0.3125rem;
 }

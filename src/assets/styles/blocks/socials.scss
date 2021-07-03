@@ -4,17 +4,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
 }
 
 .socials__item {
-  margin-right: 30px;
-
+  margin-right: 1.875rem;
 }
 
 .socials__link-icon {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   fill: white;
 
   &:hover {

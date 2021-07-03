@@ -7,16 +7,17 @@ block variables
 
 block content
   section.my-works.section
-    .triangles
-      .triangle
-        svg(viewbox='0 0 1000 150').triangle__texture
-          polygon(points='0 0, 1000 150, 0 150')
-      .triangle
-        svg(viewbox='0 0 1000 150').triangle__texture
-          polygon(points='1000 150, 0 150, 1000 0')
-    .my-works__title
-      +icon('stars2', 'bg-img')
-      .bg-img-title Мои работы
+    .my-works__container
+      .triangle__container
+        .triangle
+          svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture
+            polygon(points='0,0 0,185 1000,185 1000,175')
+        .triangle
+          svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture
+            polygon(points='0,185 1000,185 1000,0 0,175')
+      .my-works__title
+        +icon('stars2', 'bg-img')
+        .bg-img-title Мои работы
     .my-works__content
       .my-works__content-col.about__col--bg-white
         .my-works__content-title
@@ -84,5 +85,5 @@ block content
         .form__buttons
           a(href='#' type="submit").btn Отправить
           a(href='#' type='reset').btn.btn-reset Очистить
-    button.arrow-scroll-btn
+    button.arrow-scroll-btn.arrow-scroll-btn-up
       +icon('arrow_down', 'arrow-scroll arrow-scroll-up')

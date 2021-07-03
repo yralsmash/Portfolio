@@ -10,13 +10,13 @@ block scripts
 
 block content
   section.about.section
-    .triangles
+    .triangle__container
       .triangle
-        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-white
-          polygon(points='0 0, 1000 150, 0 150')
+        svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture.triangle__texture--fill-white
+          polygon(points='0,0 0,185 1000,185 1000,175')
       .triangle
-        svg(viewbox='0 0 1000 150').triangle__texture.triangle__texture--fill-beige
-          polygon(points='1000 150, 0 150, 1000 0')
+        svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture.triangle__texture--fill-beige
+          polygon(points='0,185 1000,185 1000,0 0,175')
     .about__col.about__col--bg-white
       .about__title-img
         .page__title.page__title--align-items-flex-start

@@ -2,12 +2,25 @@
 
 .about {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .about__col {
   width: 50%;
   display: flex;
   padding: 1%;
+
+  @include desktop {
+    flex-direction: column;
+  }
+
+  @include tablets {
+    width: 100%;
+    padding: 0 7%;
+  }
 
   &--bg {
     &-white {
@@ -20,13 +33,12 @@
   }
 }
 
-.about__title-img,
-.about__user-info {
-  width: 50%;
-}
-
 .about__wrapper {
   padding: 2%;
+
+  @include tablets {
+    padding: 0;
+  }
 }
 
 .about__content {

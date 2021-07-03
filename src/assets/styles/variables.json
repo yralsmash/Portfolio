@@ -1,11 +1,15 @@
 {
   "white": "#efeee9",
   "beige": "#eeebdf",
+  "blue" : "#0548be",
   "green": "#16c2aa",
+  "dark-blue" : "#083c96",
   "text-color": "#474b57",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
   "subtitle" : "#a7a7a8",
-  "blue" : "#0548be",
-  "dark-blue" : "#083c96"
+  "fullscreen": "1800px",
+  "desktop": "1200px",
+  "tablets": "768px",
+  "phones": "440px"
 }

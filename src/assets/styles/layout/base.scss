@@ -1,10 +1,22 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 body, html {
   height: 100%;
 }
 
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.42;
   color: $text-color;
   -webkit-font-smoothing: antialiased;

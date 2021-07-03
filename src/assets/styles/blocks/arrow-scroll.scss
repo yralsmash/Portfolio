@@ -3,13 +3,29 @@
 .arrow-scroll-btn {
   position: absolute;
   left: 50%;
-  top: 82%;
+  bottom: 25%;
   transform: translateX(-50%);
+
+  &-up {
+    bottom: 16%;
+
+    @include tablets {
+      bottom: 21%;
+    }
+  }
+}
+
+.arrow-scroll-btn--blog {
+  display: none;
+
+  @include tablets {
+    display: inherit;
+  }
 }
 
 .arrow-scroll {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   fill:#fff;
 
   &-up {

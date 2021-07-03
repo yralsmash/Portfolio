@@ -1,7 +1,7 @@
 // title
 
 .page__title {
-  font-family: 'Sansus Regular', sans-serif;
+  font-family: 'Sansus Webissimo', sans-serif;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,6 +14,10 @@
   }
 }
 
+.bg-img {
+  padding: 1.25rem 0;
+}
+
 .bg-img-title {
   text-align: center;
   position: absolute;
@@ -21,10 +25,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  padding: 70px 0;
-  font-size: 63px;
-  font-weight: bold;
-  font-family: 'Sansus Regular', sans-serif;
+  font-size: 3.937rem;
+  font-family: 'Sansus Webissimo', sans-serif;
+  line-height: 1;
 
   &--color-dark {
     color: $text-color;
@@ -32,12 +35,11 @@
 }
 
 .subtitle {
-  font-weight: bold;
-  padding: 40px;
-  font-size: 35px;
+  padding: 2.5rem;
+  font-size: 2.187rem;
   position: relative;
   text-align: center;
-  font-family: 'Sansus Regular', sans-serif;
+  font-family: 'Sansus Webissimo', sans-serif;
 
   &--color-white {
     color: #fff;
@@ -46,8 +48,8 @@
   &::after {
     content: '';
     display: block;
-    width: 80px;
-    height: 3px;
+    width: 5rem;
+    height: 0.1875rem;
     border-radius: 5px;
     position: absolute;
     top: 85%;

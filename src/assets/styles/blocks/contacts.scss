@@ -5,20 +5,34 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 580px;
-  background: rgba(#fff, 0.5);
+  background: rgba(#000, .5);
+
+  @include phones {
+    width: 100%;
+    top: 0;
+    transform: translate(0, 0);
+    left: 0;
+  }
 }
 
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .contacts__item {
   padding: 2%;
   display: flex;
   width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .contacts-row {
@@ -27,11 +41,11 @@
 }
 
 .contacts__icon {
-  padding: 5px;
+  padding: 0.312rem;
 }
 
 .contacts__icon-img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   fill: $blue;
 }

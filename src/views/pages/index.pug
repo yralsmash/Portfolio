@@ -8,8 +8,8 @@ block content
         .user__pic-container
           .user-pic
             +image('content/user.jpg', 'user pic', 'user__pic-img')
-        .user__desc
-          h1.user__name Круглов Сергей
+        .user__page-desc
+          h1.user__page-name Круглов Сергей
           .user__site Личный сайт веб разработчика
       .auth__socials
         +socials([
@@ -27,3 +27,6 @@ block content
         .auth__buttons
           each item in authNav
             a(href=`${item[0]}`).btn.auth__btn #{item[1]}
+  .auth-copyright
+    span © Круглов Сергей
+    span.copyright__text Создано с любовью в Loftschool | 2021
