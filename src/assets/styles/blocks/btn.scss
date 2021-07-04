@@ -7,7 +7,7 @@
   font-weight: bold;
   color: #fff;
   background: $blue;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0.6rem;
   width: 100%;
 
   &:hover {
@@ -27,7 +27,7 @@
 }
 
 .auth-button {
-  padding: 1%;
+  padding: 1rem;
   position: absolute;
   top: 5%;
   right: 5%;

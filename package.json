@@ -10,6 +10,8 @@
   "scripts": {
     "dev:mpa": "cross-env NODE_ENV=development gulp",
     "dev:spa": "webpack-dev-server --mode=development --config webpack.spa.config.js --open --hot",
+    "lint:css": "stylelint src/**/*.scss",
+    "lint:js": "eslint src/**/*.js",
     "build": "cross-env NODE_ENV=production gulp build && webpack --mode=production --config webpack.spa.config.js --progress --hide-modules",
     "reg": "node reg-util.js"
   },
@@ -54,6 +56,8 @@
     "postcss-rgb": "^1.0.0",
     "postcss-scss": "^2.0.0",
     "postcss-svgo": "^2.1.6",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "2.5.13",
