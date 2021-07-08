@@ -5,28 +5,28 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 280px;
+  min-width: 18.5rem;
 }
 
 .user__pic-container {
-  margin-bottom: 10px;
+  margin-bottom: 0.62rem;
 }
 
-.user-pic {
+.user__pic {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 9rem;
   height: 9rem;
-}
 
-.user__pic-img {
-  border-radius: 50%;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  &-img {
+    border-radius: 50%;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
 }
 
 .user__page-desc {
@@ -41,4 +41,8 @@
 .user__page-name {
   font-family: 'Sansus Webissimo', sans-serif;
   font-size: 2.5rem;
+
+  &--blog {
+    font-size: 4rem;
+  }
 }
