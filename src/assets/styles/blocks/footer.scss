@@ -1,19 +1,18 @@
 // footer
 
 .footer {
-  position: absolute;
   display: flex;
   justify-content: space-around;
-  bottom: 0;
   background: rgba(#000, 0.6);
   color: #fff;
   padding: 1%;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 
   @include tablets {
     padding: 1%;
   }
+
   @include phones {
     margin-bottom: 2.57rem;
     flex-direction: column;
@@ -39,12 +38,13 @@
     &:last-child {
       text-align: end;
     }
+
   @include phones {
-    width: 100%;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

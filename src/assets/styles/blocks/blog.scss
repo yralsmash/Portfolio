@@ -2,16 +2,10 @@
 
 .blog {
   display: flex;
-  padding-bottom: 9.375rem;
-
-  @include tablets {
-    padding-bottom: 14.187rem;
-  }
 }
 
 .blog__menu {
   padding: 3% 0.5%;
-  width: 30%;
 
   @include tablets {
     display: none;
@@ -19,7 +13,7 @@
 }
 
 .blog__content {
-  width: 70%;
+  width: 85%;
   padding: 3%;
   overflow: auto;
 
@@ -31,4 +25,12 @@
 
 .blog__item {
   margin-bottom: 3.125rem;
+}
+
+.blog__title {
+  font-weight: bold;
+}
+
+.blog__text p {
+  margin: 1rem 0;
 }

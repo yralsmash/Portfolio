@@ -15,7 +15,8 @@
 }
 
 .bg-img {
-  padding: 25px 0;
+  padding: 15px 0;
+  fill: rgba(114, 114, 114, 0.5);
 }
 
 .bg-img-title {
@@ -53,7 +54,7 @@
     border-radius: 5px;
     position: absolute;
     top: 85%;
-    background: $subtitle;
+    background: #474b57;
     left: 50%;
     transform: translateX(-50%);
   }

@@ -24,17 +24,31 @@
 }
 
 .my-works__content {
-  display: flex;
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template: "left-col slider-main" 1fr "left-col slider-main" 1fr "left-col right-col" 1fr / 1fr 1fr;
+
+  @include tablets {
+    grid-template: "slider-main slider-main" 1.5fr "left-col left-col" 1fr "right-col right-col" 1fr / 1fr;
+  }
 }
 
 .my-works__content-col {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.my-works__content-col--left {
+  background: $white;
+  grid-area: left-col;
+  padding: 4% 0;
+}
+
+.my-works__content-col--right {
+  grid-area: right-col;
 }
 
 .my-works__content-lang {

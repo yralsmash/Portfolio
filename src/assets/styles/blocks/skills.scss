@@ -8,6 +8,11 @@
 .skills-row__list {
   display: flex;
   flex-wrap: wrap;
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .skills-item {
@@ -18,13 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-
-.skills-row__list {
-  @include tablets {
-    display: flex;
-    justify-content: center;
   }
 }
 
