@@ -3,16 +3,16 @@
 .arrow-scroll-btn {
   position: absolute;
   left: 50%;
-  top: 445px;
+  top: 510px;
   transform: translateX(-50%);
   z-index: 100;
 
   &-up {
-    bottom: 16%;
-
-    @include tablets {
-      top: 500px;
-    }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    bottom: 70px;
   }
 }
 
@@ -27,7 +27,7 @@
 .arrow-scroll {
   width: 1.5625rem;
   height: 1.5625rem;
-  fill:#fff;
+  fill: #fff;
 
   &-up {
     transform: rotate(180deg);

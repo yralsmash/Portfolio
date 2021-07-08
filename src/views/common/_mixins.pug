@@ -24,15 +24,15 @@ mixin header
       .hamburger__bars
 
     if title== 'БЛОГ'
-      .header__content
+      .header__content.header__content--blog
         +icon('stars1', 'bg-img')
         .header__user-desc
           .user
             .user__pic-container
-              .user-pic
+              .user__pic
                 +image('content/user.jpg', 'user pic', 'user__pic-img')
             .user__page-desc
-              h1.user__page-name #{title}
+              h1.user__page-name.user__page-name--blog #{title}
               .user__page-site #{subtitle}
       button.arrow-scroll-btn.arrow-scroll-btn--blog
         +icon('arrow_down', 'arrow-scroll')
@@ -42,7 +42,7 @@ mixin header
         .header__user-desc
           .user
             .user__pic-container
-              .user-pic
+              .user__pic
                 +image('content/user.jpg', 'user pic', 'user__pic-img')
             .user__page-desc
               h1.user__page-name #{pageName}

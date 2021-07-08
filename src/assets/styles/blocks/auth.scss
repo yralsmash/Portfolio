@@ -16,6 +16,10 @@
   background: rgba(#000, 0.3);
   padding: 2.8rem 2rem;
   position: relative;
+
+  @include phones {
+    padding: 2.8rem 1.57rem;
+  }
 }
 
 .auth__nav {
@@ -24,15 +28,7 @@
   top: 92%;
 }
 
-.auth__btn {
-  border-left: 1px solid #fff;
-
-  &:first-child {
-    border-left: none;
-  }
-}
-
-.auth__buttons {
+.auth__nav-buttons {
   display: flex;
   width: 100%;
 }

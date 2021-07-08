@@ -22,13 +22,17 @@
     padding: 0 7%;
   }
 
+  @include phones {
+    padding: 0;
+  }
+
   &--bg {
     &-white {
       background: #fff;
     }
 
     &-beige {
-      background:$beige;
+      background: $beige;
     }
   }
 }

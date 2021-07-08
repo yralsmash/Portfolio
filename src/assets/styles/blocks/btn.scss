@@ -29,14 +29,28 @@
 .auth-button {
   padding: 1rem;
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 2rem;
+  right: 3.125rem;
   background: transparent;
   border: 2px solid #fff;
   width: auto;
 
+  @include phones {
+    padding: 0.62rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   &:hover {
     border: 2px solid $dark-blue;
     background: $dark-blue;
+  }
+}
+
+.auth__nav-btn {
+  border-left: 1px solid #fff;
+
+  &:first-child {
+    border-left: none;
   }
 }

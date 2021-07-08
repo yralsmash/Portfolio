@@ -1,7 +1,6 @@
 // copyright
 
-.copyright,
-.auth-copyright {
+.copyright {
   position: absolute;
   bottom: 0;
   display: flex;
@@ -18,12 +17,13 @@
 }
 
 .auth-copyright {
+  position: relative;
   background: transparent;
-  bottom: 50px;
+  bottom: 3.12rem;
 }
 
 .copyright__text {
-  &:before {
+  &::before {
     content: '|';
     margin: 4px;
 

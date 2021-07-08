@@ -1,8 +1,8 @@
 // triangle
 
-  .triangle {
-    width: 50%;
-    bottom: 100%;
+.triangle {
+  width: 50%;
+  bottom: 100%;
 
   &__container {
     position: absolute;
@@ -21,6 +21,7 @@
   &--fill-white {
     fill: $white;
   }
+
   &--fill-beige {
     fill: $beige;
   }

@@ -17,22 +17,22 @@ block content
             polygon(points='0,185 1000,185 1000,0 0,175')
       .my-works__title
         +icon('stars2', 'bg-img')
-        .bg-img-title Мои работы
+        .bg-img-title МОИ РАБОТЫ
     .my-works__content
-      .my-works__content-col.about__col--bg-white
+      .my-works__content-col.my-works__content-col--left
         .my-works__content-title
-          h2.subtitle Coworking
+          h2.subtitle COWORKING
         .my-works__content-lang
           span HTML, CSS, JAVASCRIPTHTML, CSS, JAVASCRIPTHTML, CSS, JAVASCRIPT
         .my-works__button
           a(href='#').btn
             +icon('chain', 'my-works__icon-img')
             span Посмотреть сайт
-      .my-works__content-col.about__col--bg-beige
+      .slider__main
+        .slider__img-block
+          +image('slider/sl1.png', 'slide', 'slider__img slider__img--main')
+      .my-works__content-col.my-works__content-col--right
         .slider
-          .slider__main
-            .slider__img-block
-              +image('slider/sl1.png', 'slide', 'slider__img slider__img--main')
           .slider__switch
             .slider__prev
               .slider__img-block
@@ -47,7 +47,7 @@ block content
   section.feedback.section
     .page__title
       +icon('stars3', 'bg-img')
-      .bg-img-title что обо мне говорят
+      .bg-img-title ЧТО ОБО МНЕ ГОВОРЯТ
     .feedback__content
       .feedback__block
         .feedback__img
@@ -61,7 +61,7 @@ block content
             Lorem ipsum dolor sit amet.
         .feedback__desc
           h3.feedback__desc-title Ковальчук Дмитрий
-          span - основатель Loftschool
+          span - основатель Школы
       .feedback__block
         .feedback__img
           +image('content/feedback2.jpg', 'slide', 'feedback__img-pic')
@@ -85,5 +85,5 @@ block content
         .form__buttons
           a(href='#' type="submit").btn Отправить
           a(href='#' type='reset').btn.btn-reset Очистить
-    button.arrow-scroll-btn.arrow-scroll-btn-up
+    button.arrow-scroll-btn-up
       +icon('arrow_down', 'arrow-scroll arrow-scroll-up')
