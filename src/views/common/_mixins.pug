@@ -23,9 +23,9 @@ mixin header
     a(href="#" target="_blank").hamburger.header__menu
       .hamburger__bars
 
-    if title== 'БЛОГ'
+    if title== 'Блог'
       .header__content.header__content--blog
-        +icon('stars1', 'bg-img')
+        +image('titles/stars1.png', 'stars', 'header-bg-img')
         .header__user-desc
           .user
             .user__pic-container
@@ -38,7 +38,7 @@ mixin header
         +icon('arrow_down', 'arrow-scroll')
     else
       .header__content
-        +icon('stars1', 'bg-img')
+        +image('titles/stars1.png', 'stars', 'header-bg-img')
         .header__user-desc
           .user
             .user__pic-container

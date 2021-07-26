@@ -19,9 +19,9 @@ block content
           polygon(points='0,185 1000,185 1000,0 0,175')
     .about__col.about__col--bg-white
       .about__title-img
-        .page__title.page__title--align-items-flex-start
-          +icon('stars2', 'bg-img')
-          h1.bg-img-title.bg-img-title--color-dark ОБО МНЕ
+        .about__title-img-wrap
+          +image('titles/stars2.png', 'stars', 'title-img')
+          h1.title.title--color-dark обо мне
       .about__user-info
         .user-info
           .user-info__avatar
@@ -72,7 +72,7 @@ block content
     .map__content
       .contacts
         .contacts__title
-          h2.subtitle КОНТАКТЫ
+          h2.subtitle контакты
         address.contacts__data
           ul.contacts__list
             -

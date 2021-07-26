@@ -5,7 +5,8 @@
 }
 
 .blog__menu {
-  padding: 3% 0.5%;
+  padding: 8% 2%;
+  width: 25rem;
 
   @include tablets {
     display: none;
@@ -13,8 +14,8 @@
 }
 
 .blog__content {
-  width: 85%;
-  padding: 3%;
+  width: 90%;
+  padding: 8% 3% 3% 7%;
   overflow: auto;
 
   @include tablets {

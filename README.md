@@ -1,24 +1,24 @@
-# Учебный шаблон проекта Portfolio
+# My Portfolio site
 
-> Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
+> Before installing the dependencies and running the project, make sure you have [last version of Node.js & NPM](https://nodejs.org/en/download/current/)
 
-##  Чтобы развернуть проект необходимо:
+##  To deploy a project you need to:
 ```sh
-$ git clone git@github.com:loftschool/advanced-boilerplate.git
-$ cd advanced-boilerplate
+$ git clone https://github.com/yralsmash/Portfolio
+$ cd Portfolio
 $ npm install
 ```
 
-## Скрипты package.json:
+## Scripts package.json:
 
-| Скрипт | Назначение |
+| Script | Purpose |
 | ------ | ------ |
-| dev:mpa | Разработка основного сайта. Страницы **обо мне**, **блог** и т.п. Запустит dev сценарии **Gulp**. |
-| dev:spa | Разработка админ панели в стиле **SPA** на **Vue.js** |
-| build  | Сборка обоеих частей проекта. Все файлы будут доступны из директории **dist** |
-| reg | Консольная утилита для регистрации. Использовать перед началом работы над **админ-панелью**. |
+| dev:mpa | Development of the main site. Pages **about**, **blog**, etc. Running dev scripts **Gulp**. |
+| dev:spa | Developing an admin panel in **SPA** style with **Vue.js** |
+| build  | Assemble both parts of the project. All files will be available from the directory **dist** |
+| reg | Console utility for registration. Use before starting work on **admin panel**. |
 
-#### Чтобы запустить скрипт:
+#### To run the script:
 ```sh
-$ npm run имя_скрипта
+$ npm run script_name
 ```

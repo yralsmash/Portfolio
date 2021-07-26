@@ -3,7 +3,7 @@
 .arrow-scroll-btn {
   position: absolute;
   left: 50%;
-  top: 510px;
+  top: 31.8rem;
   transform: translateX(-50%);
   z-index: 100;
 
@@ -12,12 +12,13 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-    bottom: 70px;
+    bottom: 4.3rem;
   }
 }
 
 .arrow-scroll-btn--blog {
   display: none;
+  top: 22rem;
 
   @include tablets {
     display: inherit;

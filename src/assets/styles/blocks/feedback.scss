@@ -5,7 +5,11 @@
   align-items: center;
   flex-direction: column;
   background: url(./assets/images/bg/bg-feedback.jpg) center center / cover no-repeat;
-  padding-bottom: 150px;
+  padding-bottom: 9.3rem;
+}
+
+.feedback__title {
+  position: relative;
 }
 
 .feedback__content {

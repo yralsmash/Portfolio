@@ -16,8 +16,8 @@ block content
           svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture
             polygon(points='0,185 1000,185 1000,0 0,175')
       .my-works__title
-        +icon('stars2', 'bg-img')
-        .bg-img-title МОИ РАБОТЫ
+        +image('titles/stars2.png', 'stars', 'title-img')
+        .title мои работы
     .my-works__content
       .my-works__content-col.my-works__content-col--left
         .my-works__content-title
@@ -45,9 +45,9 @@ block content
               button.slider__arrow
                 +icon('arrow_down', 'slider__arrow-icon slider__arrow-icon-up')
   section.feedback.section
-    .page__title
-      +icon('stars3', 'bg-img')
-      .bg-img-title ЧТО ОБО МНЕ ГОВОРЯТ
+    .feedback__title
+      +image('titles/stars3.png', 'stars', 'title-img')
+      .title что обо мне говорят
     .feedback__content
       .feedback__block
         .feedback__img
@@ -84,6 +84,6 @@ block content
           textarea(name="comment" placeholder="Ваше сообщение" rows='6').form__input.form__input-comment
         .form__buttons
           a(href='#' type="submit").btn Отправить
-          a(href='#' type='reset').btn.btn-reset Очистить
+          a(href='#' type="reset").btn.btn-reset Очистить
     button.arrow-scroll-btn-up
       +icon('arrow_down', 'arrow-scroll arrow-scroll-up')
