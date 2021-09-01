@@ -8,13 +8,7 @@ block content
 
 block content
   section.blog.section
-    .triangle__container
-      .triangle
-        svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture.triangle__texture--fill-white
-          polygon(points='0,0 0,185 1000,185 1000,175')
-      .triangle
-        svg(viewBox="0 0 1000 185" preserveAspectRatio="none").triangle__texture.triangle__texture--fill-beige
-          polygon(points='0,185 1000,185 1000,0 0,175')
+    +triangles('triangle__texture--fill-white', 'triangle__texture--fill-beige')
     sidebar.blog__menu
       nav.nav
         -
